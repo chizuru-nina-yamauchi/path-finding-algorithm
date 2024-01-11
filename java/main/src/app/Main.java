@@ -65,34 +65,20 @@ import citymap.Road;
 
             System.out.println();
 
-            // Find the fastest path and time from source to destination
-            int fastestTimeAC = map.findFastestPath(cityA, cityC);
-            if (fastestTimeAC != Integer.MAX_VALUE) {
-                System.out.println("Fastest time between City A and City C: " + fastestTimeAC);
-            } else {
-                System.out.println("No path found between City A and City C");
-            }
+            // find the fastest path and time from source to destination
+            map.findFastestPath(cityA, cityC);
 
             System.out.println();
 
-            int fastestTimeAD = map.findFastestPath(cityA, cityD);
-            if (fastestTimeAD != Integer.MAX_VALUE) {
-                System.out.println("Fastest time between City A and City E: " + fastestTimeAD);
-            } else {
-                System.out.println("No path found between City A and City E");
-            }
+            map.findFastestPath(cityA, cityD);
 
             System.out.println();
 
-            int fastestTimeAE = map.findFastestPath(cityA, cityE);
-            if (fastestTimeAE != Integer.MAX_VALUE) {
-                System.out.println("Fastest time between City A and City E: " + fastestTimeAE);
-            } else {
-                System.out.println("No path found between City A and City E");
-            }
+            map.findFastestPath(cityA, cityE);
 
             System.out.println();
 
+            //find the cheapest path
             map.findCheapestPath(cityA, cityE);
 
             System.out.println();
@@ -105,6 +91,7 @@ import citymap.Road;
 
             System.out.println();
 
+            // find the best path
             map.findBestPath(cityA, cityE);
 
 

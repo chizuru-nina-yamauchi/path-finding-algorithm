@@ -60,7 +60,7 @@ public class Map {
     Update the previous vertex with the current vertex
      */
 
-    public int findFastestPath(City source, City destination) {
+    public void findFastestPath(City source, City destination) {
         // initialize distance array to store shortest distances from the source
         HashMap<City, Integer> distance = new HashMap<>();
         // initialize priority queue for selecting the next closest city
@@ -118,7 +118,7 @@ public class Map {
         // get the fastest time from distance map for the destination city
         int fastestTime = distance.get(destination);
 
-        // construct the fastest path based on predecessor, source and detination
+        // construct the fastest path based on predecessor, source and destination
         List<City> fastestPath = constructPath(predecessor, source, destination);
 
         // check if a path was found(= the fastest time is not the maximum possible value)
@@ -134,7 +134,6 @@ public class Map {
             System.out.println("No path found between " + source.getName() + " and " + destination.getName());
         }
 
-        return fastestTime;
     }
 
     private List<City> constructPath(HashMap<City, City> predecessor, City source, City destination) {
