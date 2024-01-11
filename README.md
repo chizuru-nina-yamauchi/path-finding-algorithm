@@ -1,6 +1,7 @@
 # path-finding-algorithm
 My solution for the assignment in the online Java course. My git history is in my private repositroy in the organization on github. Therefore, I copied my code.
 Fastest-cheapest-best-path finding with algorithm.
+These algorithm methods are implemented in java/main ->src ->citymap ->'Map' java class file.
 Result below.
 
 # Assignment: Dynamic Programming - Optimal Path Finding
@@ -71,6 +72,17 @@ Road roadAB = new Road(cityA, cityB, 5, 2, true);
 Road roadBA = new Road(cityB, cityA, 5, 2, true);
 ![the result photo 3](java/main/resources/pic3.png)
 ![the result photo 4](java/main/resources/pic4.png)
+
+
+## YouTube video and website that helped my understanding
+https://www.youtube.com/watch?v=OQ5jsbhAv_M (Dynamic Programming 1:Fibonacci, Shortest Paths)
+https://www.youtube.com/watch?v=pVfj6mxhdMw (Graph Data Structure 4. Dijkstra's Shortest Path Algorithm)
+https://www.youtube.com/watch?v=7z_HXFZqXqc (BroCode:Learn Priority Queue data structures in 5 minutes)
+https://www.happycoders.eu/algorithms/dijkstras-algorithm-java/ (website: Dijkstra's Algorithm (with Java Examples) with Priority Queue)
+https://favtutor.com/blogs/dijkstra-algorithm-java (website: Dijkstra's Algorithm in Java)
+
+
+
 
 
 
