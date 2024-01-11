@@ -135,17 +135,25 @@ public class Map {
         }
 
     }
-
+    // constructs the path from the predecessor map between source and destination cities
+    // List representing the constructed path
     private List<City> constructPath(HashMap<City, City> predecessor, City source, City destination) {
+
+        // List to store the constructed path
         List<City> path = new ArrayList<>();
+        // variable to track the total time of the path
         int totalTime = 0;
+        // start from the destiantion city
         City current = destination;
-
+        // iterate until reaching the source city
         while (current != null) {
+            // get the predecessor ity of the current city
             City previousCity = predecessor.get(current);
-
+            // check if there is a valid road between the previous and current city
             if (previousCity != null) {
                 Road road = getRoad(previousCity, current);
+
+                //update the total time with the time of the road
                 if (road != null) {
                     totalTime += road.getTime();
                 } else {
@@ -154,11 +162,12 @@ public class Map {
                     return path;
                 }
             }
-
+            // add the current city to the path
             path.add(current);
+            // move to the previous city
             current = previousCity;
         }
-
+        // reverse the path to start from the source city
         Collections.reverse(path);
         System.out.println("Total Time between " + source.getName() + " and " + destination.getName() + " is " + totalTime);
         return path;
@@ -316,14 +325,19 @@ public class Map {
 
         System.out.println("Best Path between " + source.getName() + " and " + destination.getName() + ": ");
 
+        // to track the total time and total cost of the best path
         int totalTime = 0;
         int totalCost = 0;
-
+        // iterate over each city in the best path excluding the last city
         for (int i = 0; i < bestPath.size() - 1; i++) {
+            // get the current city and the next city in the best path
             City fromCity = bestPath.get(i);
             City toCity = bestPath.get(i + 1);
 
+            // get the road connecting the current city to the next city
             Road road = getRoad(fromCity, toCity);
+
+            // check if the road is valid
             if (road != null) {
                 totalTime += road.getTime();
                 totalCost += road.getCost();

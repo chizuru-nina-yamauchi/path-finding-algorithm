@@ -45,15 +45,23 @@ import java.util.List;
                     '}';
         }
 
+        // generate a summary of all roads in the map
         private String getRoadsSummary() {
+            // StringBuilder to construct the summary string
             StringBuilder summary = new StringBuilder("[");
+
+            //iterate through each road in the lists of roads
             for (Road road : roads) {
+                // append the summary of each road along with a comma and space
                 summary.append(road.getSummary()).append(", ");
             }
+            // check if there are any roads in the list
             if (!roads.isEmpty()) {
                 summary.setLength(summary.length() - 2); // Remove the trailing comma and space
             }
+            // closing the summary with ']'
             summary.append("]");
+            // convert the StringBuilder to a String and return
             return summary.toString();
         }
 
