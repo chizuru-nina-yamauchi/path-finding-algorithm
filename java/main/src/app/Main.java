@@ -15,7 +15,7 @@ import citymap.Road;
             City cityE = new City("City E");
 
 
-            //roads
+
             //roads
             Road roadAB = new Road(cityA, cityB, 50, 2, true);
             Road roadBA = new Road(cityB, cityA, 50, 2, true);
